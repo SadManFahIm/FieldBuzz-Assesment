@@ -1,0 +1,39 @@
+{% extends "authenticate/base.html" %}
+
+{% load crispy_forms_tags %}
+{% load bootstrap4 %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+
+<div class="" style="padding: 20px 20px 20px 20px; background-color:#e6e1e1; width:500px; margin:0 auto;" >
+
+  {% if errors %}
+    <div style="padding: 5px 5px 5px 5px;color:#3b181f; background-color:#b5aaac">
+      <h5 style="color:#75061c">Error! Please check these errors and continue again.</h5>
+      <h5 > {{ errors }} </h5>
+    </div>
+    <br>
+  {% endif %}
+
+  <h2>Submit Detail</h2><br>
+
+  <form enctype="multipart/form-data" method="POST" id="form">
+    {% csrf_token %}
+    {% bootstrap_form form %}
+    <!-- {{ form.as_p }} -->
+    <!-- {{ form | crispy }} -->
+
+    <button id="login-submit" class="btn btn-primary" type="submit">Upload</button>
+  </form>
+
+</div>
+
+
+<script>
+
+
+</script>
+
+{% endblock %}

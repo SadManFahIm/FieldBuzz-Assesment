@@ -1,0 +1,94 @@
+{% extends "authenticate/base.html" %}
+
+{% load crispy_forms_tags %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+
+<div class="" style="padding: 20px 20px 20px 20px; background-color:#e6e1e1; width:500px; margin:0 auto;" >
+
+  <h2>Login</h2><br>
+
+  <form method="post" id="form">
+    {% csrf_token %}
+
+    <div id="user-info">
+  		<div class="form-field">
+  			<input required class="form-control" type="email" name="email" placeholder="Enter your Email">
+  		</div>  <br>
+  		<div class="form-field">
+  			<input required class="form-control" type="password" name="password" placeholder="Enter your password">
+  		</div> <br>
+  	</div>
+
+    <button id="login-submit" class="btn btn-primary" type="submit">Login</button>
+  </form>
+  <div id="checking-user" class="box-element invisible">
+    <br><p >Checking authentication details. . .</p>
+  </div>
+  <h4 id="successful" class="invisible"> Logged in successfully</h4>
+  <h6 id="unsuccessful" class="invisible"> Incorrect creditntials provided!</h6>
+  <h6 id="index_page" class="invisible">Taking you to Homepage</h6>
+</div>
+
+
+<script>
+  var form = document.getElementById('form')
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+
+    document.getElementById('checking-user').classList.remove("invisible")
+    document.getElementById('login-submit').classList.add("invisible")
+  })
+
+  document.getElementById('login-submit').addEventListener('click', function(e){
+    submitFormData()
+  })
+
+  function submitFormData() {
+    console.log('User form submitting')
+
+    var userFormData = {
+      "username": form.email.value,
+      "password": form.password.value,
+    }
+
+    var url = `https://recruitment.fisdev.com/api/login/`
+
+    fetch(url, {
+      method:'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        // 'X-CSRFToken': csrftoken,
+      },
+      body:JSON.stringify(userFormData)
+    })
+
+    .then((response) => response.json())
+
+    .then((data) => {
+      // console.log('successfully logged in: ', data)
+
+      if(data.token!=undefined){
+        localStorage.setItem("token", data.token);
+        setCookie('token', data.token, 5)
+        document.getElementById("successful").classList.remove("invisible");
+        document.getElementById("index_page").classList.remove("invisible");
+        setTimeout(indexPage, 2000)
+      } else {
+        document.getElementById("unsuccessful").classList.remove("invisible");
+      }
+
+    })
+
+  }
+  function indexPage(){
+    window.location.href = "{% url 'index' %}";
+  }
+
+
+</script>
+
+{% endblock %}

@@ -1,0 +1,49 @@
+{% extends "authenticate/base.html" %}
+
+{% block content %}
+
+<div class="jumbotron">
+ <br> <h1>Hello!</h1>
+ <h2>Welcome to Assessment of FieldBuzz</h2>
+ <br> <h5 style="padding:5px 5px 5px 5px ;text-align: center; background-color:#c9b3b5; color:#a1252f" id="authenticated" class="invisible">You are authenticated successfully!</h5>
+ <br>
+
+ <ul>
+   <li>
+     <a href="{% url 'login' %}">
+       Go to login page
+     </a>
+   </li>
+   <li>
+     <a href="{% url 'upload_details' %}">
+       Upload neccessary information using API
+     </a>
+   </li>
+ </ul>
+
+ {% if messages %}
+   {% for message in messages %}<br>
+     <div class="alert alert-warning alert-dismissible" role="alert">
+       <button class="close" data-dismiss="alert" >
+         <small><sup>x</sup> </small>
+       </button>
+       {{message}}
+     </div>
+   {% endfor %}
+ {% endif %}
+
+</div>
+
+<script>
+
+  var token = localStorage.getItem("token")
+  if (token==null){
+    localStorage.setItem('token', "initialized");
+  }
+  if (token!="initialized") {
+    document.getElementById("authenticated").classList.remove("invisible")
+  }
+
+</script>
+
+{% endblock %}
