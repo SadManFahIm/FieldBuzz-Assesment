@@ -1,0 +1,122 @@
+Microsoft Windows [Version 10.0.18362.175]
+(c) 2019 Microsoft Corporation. All rights reserved.
+
+(venv) C:\Users\Hp\Documents\Fieldbuzz-Assesment-main>git init
+Initialized empty Git repository in C:/Users/Hp/Documents/Fieldbuzz-Assesment-main/.git/
+
+(venv) C:\Users\Hp\Documents\Fieldbuzz-Assesment-main>git add .
+warning: LF will be replaced by CRLF in .gitignore.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in .idea/inspectionProfiles/profiles_settings.xml.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in LICENSE.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in README.md.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in authenticate/admin.py.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in authenticate/apps.py.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in authenticate/forms.py.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in authenticate/migrations/0001_initial.py.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in authenticate/migrations/0002_auto_20201211_0310.py.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in authenticate/migrations/0003_auto_20201211_0313.py.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in authenticate/migrations/0004_auto_20201211_0318.py.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in authenticate/models.py.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in authenticate/templates/authenticate/base.html.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in authenticate/templates/authenticate/index.html.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in authenticate/templates/authenticate/login.html.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in authenticate/templates/authenticate/upload_details.html.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in authenticate/tests.py.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in authenticate/urls.py.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in authenticate/validators.py.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in authenticate/views.py.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in fieldbuzz/asgi.py.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in fieldbuzz/settings.py.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in fieldbuzz/urls.py.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in fieldbuzz/wsgi.py.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in manage.py.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in requirement.txt.
+The file will have its original line endings in your working directory
+
+(venv) C:\Users\Hp\Documents\Fieldbuzz-Assesment-main>git commit -m "first commit"
+[master (root-commit) 18cfefd] first commit
+ 33 files changed, 1118 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 .idea/.gitignore
+ create mode 100644 .idea/Fieldbuzz-Assesment-main.iml
+ create mode 100644 .idea/inspectionProfiles/profiles_settings.xml
+ create mode 100644 .idea/misc.xml
+ create mode 100644 .idea/modules.xml
+ create mode 100644 LICENSE
+ create mode 100644 README.md
+ create mode 100644 authenticate/__init__.py
+ create mode 100644 authenticate/admin.py
+ create mode 100644 authenticate/apps.py
+ create mode 100644 authenticate/forms.py
+ create mode 100644 authenticate/migrations/0001_initial.py
+ create mode 100644 authenticate/migrations/0002_auto_20201211_0310.py
+ create mode 100644 authenticate/migrations/0003_auto_20201211_0313.py
+ create mode 100644 authenticate/migrations/0004_auto_20201211_0318.py
+ create mode 100644 authenticate/migrations/__init__.py
+ create mode 100644 authenticate/models.py
+ create mode 100644 authenticate/templates/authenticate/base.html
+ create mode 100644 authenticate/templates/authenticate/index.html
+ create mode 100644 authenticate/templates/authenticate/login.html
+ create mode 100644 authenticate/templates/authenticate/upload_details.html
+ create mode 100644 authenticate/tests.py
+ create mode 100644 authenticate/urls.py
+ create mode 100644 authenticate/validators.py
+ create mode 100644 authenticate/views.py
+ create mode 100644 fieldbuzz/__init__.py
+ create mode 100644 fieldbuzz/asgi.py
+ create mode 100644 fieldbuzz/settings.py
+ create mode 100644 fieldbuzz/urls.py
+ create mode 100644 fieldbuzz/wsgi.py
+ create mode 100644 manage.py
+ create mode 100644 requirement.txt
+
+(venv) C:\Users\Hp\Documents\Fieldbuzz-Assesment-main>git remote add origin https://github.com/SadManFahIm/FieldBuzz-Assesment.git
+
+(venv) C:\Users\Hp\Documents\Fieldbuzz-Assesment-main>git push -u origin master
+fatal: helper error (-1): authentication prompt was canceled
+Username for 'https://github.com': SadManFahIm
+Password for 'https://SadManFahIm@github.com':
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/SadManFahIm/FieldBuzz-Assesment.git/'
+
+(venv) C:\Users\Hp\Documents\Fieldbuzz-Assesment-main>git push -u origin master
+fatal: helper error (-1): authentication prompt was canceled
+Username for 'https://github.com': SadManFahIm
+Password for 'https://SadManFahIm@github.com':
+Enumerating objects: 40, done.
+Counting objects: 100% (40/40), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (37/37), done.
+Writing objects: 100% (40/40), 15.63 KiB | 1.42 MiB/s, done.
+Total 40 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), done.
+To https://github.com/SadManFahIm/FieldBuzz-Assesment.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+(venv) C:\Users\Hp\Documents\Fieldbuzz-Assesment-main>
